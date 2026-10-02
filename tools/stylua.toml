@@ -1,0 +1,14 @@
+# Ширина строки задана в байтах, а не в символах: StyLua меряет длину в байтах UTF-8,
+# а комментарии и сообщения об ошибках у нас на русском, где каждая буква занимает 2 байта.
+# При «честных» 110 короткие строки с кириллицей ломались на несколько строк и код
+# становился нечитаемым. 190 байт ≈ 100 символов на строке со смешанным текстом.
+column_width = 190
+line_endings = "Unix"
+indent_type = "Tabs"
+indent_width = 4
+quote_style = "AutoPreferDouble"
+call_parentheses = "Always"
+collapse_simple_statement = "Never"
+
+[sort_requires]
+enabled = true
